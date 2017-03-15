@@ -1,0 +1,51 @@
+/* CSS Document */
+
+//网页宽
+.container{width: 1200px !important;}
+ @contain_width: 1200px;
+//列数 
+ @cols: 4;
+//列间隔 
+ @spac: 36px;
+//每列宽度 
+ @col_width: @contain_width/@cols;
+//每列去除PADDING后的宽度
+@col_inner: @col_width - @spac + @spac/@cols;
+
+@col-0-pdright:0;
+@col-1-pdleft:0;
+@col-1-pdright:@col_width - @col_inner - @col-0-pdright;
+@col-2-pdleft:@spac - @col-1-pdright;
+@col-2-pdright:@col_width - @col_inner - @col-2-pdleft;
+@col-3-pdleft:@spac - @col-2-pdright;
+@col-3-pdright:@col_width - @col_inner - @col-3-pdleft;
+@col-4-pdleft:@spac - @col-3-pdright;
+@col-4-pdright:@col_width - @col_inner - @col-4-pdleft;
+@col-5-pdleft:@spac - @col-4-pdright;
+@col-5-pdright:@col_width - @col_inner - @col-5-pdleft;
+@col-6-pdleft:@spac - @col-5-pdright;
+@col-6-pdright:@col_width - @col_inner - @col-6-pdleft;
+.col-pd1 {
+ padding-left:@col-1-pdleft;
+ padding-right:@col-1-pdright;
+}
+.col-pd2 {
+ padding-left:@col-2-pdleft;
+ padding-right:@col-2-pdright;
+}
+.col-pd3 {
+ padding-left:@col-3-pdleft;
+ padding-right:@col-3-pdright;
+}
+.col-pd4 {
+ padding-left:@col-4-pdleft;
+ padding-right:@col-4-pdright;
+}
+.col-pd5 {
+ padding-left:@col-5-pdleft;
+ padding-right:@col-5-pdright;
+}
+.col-pd6 {
+ padding-left:@col-6-pdleft;
+ padding-right:@col-6-pdright;
+}
